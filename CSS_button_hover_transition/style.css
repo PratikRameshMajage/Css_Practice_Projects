@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+}
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* from center to scale */
+.box1{
+    height: 50px;
+    width: 150px;
+    background-color: aliceblue;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.bottom-box1{
+    height: 100px;
+    width: 250px;
+    background-color: rosybrown;
+    border-radius: 50px;
+    position: absolute;
+    scale: 0;
+    transition: all ease 1s;
+}
+.box1:hover .bottom-box1{
+    scale: 1;
+}
+
+/* ///////////////////////////////////////////////////////////////// */
+
+/* from bottom to top scale*/
+.box2{
+    width: 150px;
+    height: 50px;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50px;
+}
+.bottom-box2{
+    width: 250px;
+    height: 150px;
+    background-color: rosybrown;
+    position: absolute;
+    top: 100%;
+    border-radius: 50%;
+    transition: all ease 1s;
+}
+.box2:hover .bottom-box2{
+    top: -50%;
+}
+
+/* from left to right scale */
+.box3{
+    width: 150px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.bottom-box3{
+    width: 150px;
+    height: 50px;
+    background-color: rosybrown;
+    border-radius: 50px;
+    position: absolute;
+    left: -100%;
+    transition: all ease 1s;
+}
+.box3:hover .bottom-box3{
+    left: 0%;
+} 
+  
+/* ///////////////////////////////////////////////////////////////// */
+
+/* from right to left scale */
+.box4{
+    width: 150px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.bottom-box4{
+    width: 150px;
+    height: 50px;
+    background-color: rosybrown;
+    border-radius: 50px;
+    position: absolute;
+    left: 100%;
+    transition: all ease 1s;
+}
+.box4:hover .bottom-box4{
+    left: 0%;
+} 
